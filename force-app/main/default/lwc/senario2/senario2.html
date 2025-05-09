@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contact Box" icon-name="standard:contact">
+        <lightning-input label="Enter Contact Name"  onchange={handleContactNameChange}></lightning-input>
+        <lightning-button label="Search" onclick={handleSearch} class="slds-m-top_small"></lightning-button>
+        <template if:true={contact}>
+            <p class="slds-m-top_medium"><strong>Name:</strong> {contact.Name}</p>
+            <p><strong>Email:</strong> {contact.Email}</p>
+            <p><strong>Phone:</strong> {contact.Phone}</p>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card> 
+</template>

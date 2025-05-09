@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Dynamic Form" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                label="Select Role"
+                value={selectedRole}
+                options={roleOptions}
+                onchange={handleRoleChange}>
+            </lightning-combobox>
+
+            <template if:true={isStudent}>
+                <lightning-input label="School Name" value={schoolName}></lightning-input>
+                <lightning-input label="Grade" value={grade}></lightning-input>
+            </template>
+
+            <template if:true={isEmployee}>
+                <lightning-input label="Company Name" value={companyName}></lightning-input>
+                <lightning-input label="Designation" value={designation}></lightning-input>
+            </template>
+        </div>
+    </lightning-card>
+</template>

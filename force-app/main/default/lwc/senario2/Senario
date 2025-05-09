@@ -1,0 +1,2 @@
+Build an LWC where a user can search for a Contact by name, and the component displays the email 
+and phone number of the matching contact using an Apex class.
