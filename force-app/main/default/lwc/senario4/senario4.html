@@ -1,0 +1,29 @@
+<template>
+    <template if:true={showDropdown}>
+        <lightning-card title="Assign Sales Rep">
+            <div class="slds-p-around_medium">
+                <p><strong>Opportunity Amount:</strong> ₹{amount}</p>
+                <lightning-combobox
+                    name="rep"
+                    label="Select Top Rep"
+                    value={selectedRep}
+                    options={topReps}
+                    onchange={handleChange}>
+                </lightning-combobox>
+                <lightning-button
+                    class="slds-m-top_medium"
+                    variant="brand"
+                    label="Assign"
+                    onclick={handleAssign}>
+                </lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:false={showDropdown}>
+        <lightning-card title="Assign Sales Rep">
+            <div class="slds-p-around_medium">
+                <p>This opportunity amount is below ₹10,00,000. No action needed.</p>
+            </div>
+        </lightning-card>
+    </template>
+</template>

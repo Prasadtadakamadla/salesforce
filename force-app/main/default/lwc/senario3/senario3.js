@@ -18,6 +18,11 @@ export default class LeadQualifier extends LightningElement {
     decisionMaker = false;
     timelineSet = false;
 
+    // direct way
+    // getRecord({ recordId: this.recordId, fields: [NAME_FIELD] })
+    // .then(result => { /* handle success */ })
+    // .catch(error => { /* handle error */ });
+
     @wire(getRecord, { recordId: '$recordId', fields: [NAME_FIELD, COMPANY_FIELD, STATUS_FIELD] })
     loadLead({ error, data }) {
         if (data) {

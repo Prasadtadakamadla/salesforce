@@ -1,0 +1,3 @@
+Shows the Opportunity’s Amount and Owner.
+If the Amount is greater than ₹10L, displays a dropdown of Top Sales Reps.
+On selecting a rep and clicking “Assign,” updates the Opportunity Owner.
