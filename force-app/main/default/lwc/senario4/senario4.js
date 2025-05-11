@@ -17,9 +17,9 @@ export default class AssignRepToOpportunity extends LightningElement {
 
     // Dummy top sales reps - this can be dynamically loaded too
     topReps = [
-        { label: 'Ravi Kumar', value: '005XXXXXXXXXXXXAAA' },
-        { label: 'Sneha Verma', value: '005XXXXXXXXXXXXAAB' },
-        { label: 'Amit Shah', value: '005XXXXXXXXXXXXAAC' }
+        { label: 'john berry', value: '005dL00000Bkm3JQAR' },
+        { label: 'rutuja K', value: '005dL00000Bkm3KQAR' },
+        { label: 't Prasad', value: '005dL000009E5sHQAS' }
     ];
 
     @wire(getRecord, { recordId: '$recordId', fields: FIELDS })
