@@ -1,0 +1,12 @@
+<template>
+    <lightning-datatable
+            key-field="Id"
+            data={data}
+            columns={columns}
+            draft-values={draftValues}
+            onrowaction={handleRowAction}
+            onsave={handleSave}
+            hide-checkbox-column
+            show-row-number-column>
+        </lightning-datatable>
+</template>
